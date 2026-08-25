@@ -1,4 +1,6 @@
-
+import src.missao.Missao;
+import src.personagem.Personagem;
+import src.recompensa.Recompensa;
 
 public class Main{
 

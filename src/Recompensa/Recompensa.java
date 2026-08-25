@@ -1,10 +1,12 @@
+package src.recompensa;
+
 import java.util.Objects;
 
 public final class Recompensa {
-    private String item;
+    private final String item;
     private int energy;
 
-    Recompensa(String item, int energy){
+    public Recompensa(String item, int energy){
         this.item = Objects.requireNonNull(item, "Item é obrigatório").trim();
         if(this.item.isEmpty()){
             throw new IllegalArgumentException("Item não pode ficar vazio.");

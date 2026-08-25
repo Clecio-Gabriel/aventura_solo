@@ -1,4 +1,8 @@
+package src.missao;
+
 import java.util.Objects;
+
+import src.recompensa.Recompensa;
 
 public class Missao{
 

@@ -1,3 +1,7 @@
+package src.personagem;
+
+import src.recompensa.Recompensa;
+
 public class Personagem{
 
     private final String nome;
