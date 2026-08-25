@@ -1,6 +1,6 @@
-package src.personagem;
+package com.personagem;
 
-import src.recompensa.Recompensa;
+import com.recompensa.Recompensa;
 
 public class Personagem{
 

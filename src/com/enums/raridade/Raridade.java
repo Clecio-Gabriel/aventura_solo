@@ -1,4 +1,4 @@
-package src.Enums.Raridade;
+package enums.raridade;
 
 public enum Raridade {
     COMUM,

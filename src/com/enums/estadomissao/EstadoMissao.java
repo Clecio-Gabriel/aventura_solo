@@ -1,4 +1,4 @@
-package src.Enums.EstadoMissao;
+package enums.estadomissao;
 
 public enum EstadoMissao {
     INATIVO,

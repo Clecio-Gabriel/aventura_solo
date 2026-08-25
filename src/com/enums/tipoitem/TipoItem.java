@@ -1,4 +1,4 @@
-package src.Enums.TipoItem;
+package enums.tipoitem;
 
 public enum TipoItem {
     ARMADURA,

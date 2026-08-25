@@ -1,4 +1,4 @@
-package src.recompensa;
+package com.recompensa;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
-import src.missao.Missao;
-import src.personagem.Personagem;
-import src.recompensa.Recompensa;
+import com.missao.Missao;
+import com.personagem.Personagem;
+import com.recompensa.Recompensa;
 
 public class Main{
 
