@@ -9,9 +9,9 @@
     - [X] Missao
     - [X] Recompensa
 - Enums
-    - [ ] TipoItem
-    - [ ] Raridade
-    - [ ] EstadoMissao
+    - [X] TipoItem
+    - [X] Raridade
+    - [X] EstadoMissao
 
 #### Other things:
 - [ ] atributos protegidos com private;
