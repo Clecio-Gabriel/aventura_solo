@@ -14,12 +14,12 @@
     - [X] EstadoMissao
 
 #### Other things:
-- [ ] atributos protegidos com private;
+- [X] atributos protegidos com private;
 - [ ] métodos responsáveis por alterar o estado dos objetos;
 - [ ] pelo menos uma associação;
 - [ ] pelo menos uma agregação;
 - [ ] pelo menos uma composição;
-- [ ] utilização dos três enum;
+- [X] utilização dos três enum;
 - [ ] coleções quando houver multiplicidade, por exemplo: ```List<Item>```;
-- [ ] validações que impeçam estados inválidos;
+- [X] validações que impeçam estados inválidos;
 - [ ] uma classe Main demonstrando o funcionamento.
