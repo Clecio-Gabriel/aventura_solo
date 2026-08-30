@@ -1,7 +1,6 @@
 package com.missao;
 
 import java.util.Objects;
-import com.recompensa.Recompensa;
 
 public class Missao{
 

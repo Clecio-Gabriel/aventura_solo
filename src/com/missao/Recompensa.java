@@ -1,4 +1,4 @@
-package com.recompensa;
+package com.missao;
 
 import java.util.Objects;
 
