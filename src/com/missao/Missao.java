@@ -1,7 +1,6 @@
 package com.missao;
 
 import java.util.Objects;
-import com.recompensa.Recompensa;
 
 public class Missao{
 
@@ -30,6 +29,7 @@ public class Missao{
 
     @Override
     public String toString(){
-        return "Titulo: " + title + " | " + prize + " | Estado: " + state;
+        // return "Titulo: " + title + " | " + prize + " | Estado: " + state;
+        return String.format("Título: %s%nRecompensa: %s%nEstado: %s", title, prize, state);
     }
 }

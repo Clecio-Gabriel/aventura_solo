@@ -1,6 +1,6 @@
 package com.personagem;
 
-import com.recompensa.Recompensa;
+import com.missao.Recompensa;
 
 public class Personagem{
 
