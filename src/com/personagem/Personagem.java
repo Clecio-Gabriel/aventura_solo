@@ -18,7 +18,7 @@ public class Personagem{
     
     // [ II ] METHODS
     public void receive(Recompensa prize){
-        this.energy += prize.getEnergy();
+        // this.energy += prize.getEnergy();
     }
     public void rest(){
         this.energy += 10;
