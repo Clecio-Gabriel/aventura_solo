@@ -1,32 +1,45 @@
 package com.recompensa;
 
+import enums.raridade.Raridade;
+import enums.tipoitem.TipoItem;
 import java.util.Objects;
 
 public final class Recompensa {
     private final String item;
-    private int energy;
+    private int quantidade;
+    private TipoItem tipo;
+    private Raridade raridade;
 
-    public Recompensa(String item, int energy){
-        this.item = Objects.requireNonNull(item, "Item é obrigatório").trim();
+    // Construtor
+    public Recompensa(String item, int quantidade, TipoItem tipo, Raridade raridade){
+        this.item = Objects.requireNonNull(item, "Item é obrigatório.").trim();
+        this.tipo = Objects.requireNonNull(tipo, "Tipo é obrigatótio.");
+        this.raridade = Objects.requireNonNull(raridade, "Raridade é obrigatótio.");
+
         if(this.item.isEmpty()){
             throw new IllegalArgumentException("Item não pode ficar vazio.");
         }
-        if(this.energy < 0){
-            throw new IllegalArgumentException("Energia não ser um valor negativo.");
+        if(this.quantidade < 0){
+            throw new IllegalArgumentException("Quantidade não ser um valor negativo.");
         }
-        this.energy = energy;
+        
+        this.quantidade = quantidade;
+        this.tipo = tipo;
+        this.raridade = raridade;
+
     }
 
-    public String getItem(){
-        return item;
-    }
+    // Getters
+    public String getItem(){ return item; }
 
-    public int getEnergy(){
-        return energy;
-    }
+    public int getQuantidade(){ return quantidade; }
+
+    public TipoItem getTipoItem(){ return tipo; }
+
+    public Raridade getRaridade(){ return raridade; }
 
     @Override
     public String toString(){
-         return String.format("%s (+%d energia)",item, energy);
+         return "Recompensa: " + item + " | Quantidade: " + quantidade + " | Tipo do item: " + tipo + " | Raridade: " + raridade;
     }
 }
