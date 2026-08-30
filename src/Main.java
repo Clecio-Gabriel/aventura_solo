@@ -1,6 +1,4 @@
 // import com.inventario.*;
-
-
 import com.missao.*;
 import com.personagem.*;
 import com.recompensa.*;
