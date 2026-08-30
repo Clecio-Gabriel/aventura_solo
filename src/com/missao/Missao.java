@@ -1,7 +1,8 @@
 package com.missao;
 
-import com.recompensa.Recompensa;
 import java.util.Objects;
+import com.recompensa.Recompensa;
+
 public class Missao{
 
     private final String title;

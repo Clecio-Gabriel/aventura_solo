@@ -15,7 +15,7 @@
 
 #### Other things:
 - [X] atributos protegidos com private;
-- [ ] métodos responsáveis por alterar o estado dos objetos;
+- [X] métodos responsáveis por alterar o estado dos objetos;
 - [ ] pelo menos uma associação;
 - [ ] pelo menos uma agregação;
 - [ ] pelo menos uma composição;
