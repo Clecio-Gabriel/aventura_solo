@@ -10,6 +10,7 @@ public class Item{
     private final Raridade rarity;
     private int quantity;
 
+    // [ I ] CONSTRUCTORS
     public Item(String name, TipoItem type, Raridade rarity, int quantity){
         this.name = Objects.requireNonNull(name).trim();
         if (this.name.isEmpty()){
@@ -24,5 +25,17 @@ public class Item{
         this.quantity = quantity;
 
     }
+
+    // [ II ] METHODS
+
+
+
+    // [ III ] OVERRIDE METHODS
+    @Override
+    public String toString(){
+        return String.format("%s | Tipo: %s | Raridade: %s | Quantidade: %d", name, type, rarity, quantity);
+    }
+
+
 
 };
