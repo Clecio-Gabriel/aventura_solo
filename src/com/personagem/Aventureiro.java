@@ -1,4 +1,4 @@
-package com.aventureiro;
+package com.personagem;
 
 import enums.estadomissao.EstadoMissao;
 

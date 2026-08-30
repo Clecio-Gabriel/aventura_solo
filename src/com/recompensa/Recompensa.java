@@ -1,7 +1,5 @@
 package com.recompensa;
 
-import enums.raridade.Raridade;
-import enums.tipoitem.TipoItem;
 import java.util.Objects;
 
 public final class Recompensa {

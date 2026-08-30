@@ -1,4 +1,4 @@
-package enums.estadomissao;
+package com.missao;
 
 public enum EstadoMissao {
     INATIVO,

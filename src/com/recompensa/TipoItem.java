@@ -1,4 +1,4 @@
-package enums.tipoitem;
+package com.recompensa;
 
 public enum TipoItem {
     ARMADURA,
