@@ -3,7 +3,7 @@
 ### What is left to implement:
 #### Specifications:
 - Classes
-    - [ ] Aventureiro
+    - [X] Aventureiro
     - [ ] Inventário
     - [X] Item
     - [X] Missao
@@ -22,4 +22,4 @@
 - [X] utilização dos três enum;
 - [ ] coleções quando houver multiplicidade, por exemplo: ```List<Item>```;
 - [X] validações que impeçam estados inválidos;
-- [ ] uma classe Main demonstrando o funcionamento.
+- [X] uma classe Main demonstrando o funcionamento.
