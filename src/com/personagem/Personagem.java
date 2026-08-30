@@ -4,16 +4,16 @@ import com.recompensa.Recompensa;
 
 public class Personagem{
 
-    private final String nome;
-    private int energy;
+    protected final String name;
+    protected int life;
 
     // [ I ] CONSTRUCTORS
-    public Personagem(String nm){
-        this(nm, 100);
+    public Personagem(String name){
+        this(name, 100);
     }
-    public Personagem(String nm, int e){
-        this.nome = nm;
-        this.energy = e;
+    public Personagem(String name, int life){
+        this.name = name;
+        this.life = life;
     }
     
     // [ II ] METHODS
@@ -21,7 +21,7 @@ public class Personagem{
         // this.energy += prize.getEnergy();
     }
     public void rest(){
-        this.energy += 10;
+        this.life += 10;
     }
 
 
@@ -29,7 +29,7 @@ public class Personagem{
 
     @Override
     public String toString(){
-        return String.format("%s (%d Energy left).", this.nome, this.energy);
+        return String.format("%s (%d Energy left).", this.name, this.life);
     }
 
 }
