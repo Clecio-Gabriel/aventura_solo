@@ -1,35 +1,34 @@
 package com.missao;
 
-import java.util.Objects;
-
 import com.recompensa.Recompensa;
-
+import java.util.Objects;
 public class Missao{
 
     private final String title;
     private final Recompensa prize;
-    private boolean finished;
+    private EstadoMissao state;
 
-    public Missao(String t, Recompensa p){
-        this.title = Objects.requireNonNull(t).trim();
+    public Missao(String title, Recompensa prize){
+        this.title = Objects.requireNonNull(title).trim();
         if (this.title.isEmpty()){
-            throw new IllegalArgumentException("Title can't be empty.");
+            throw new IllegalArgumentException("Missão deve ter um titulo.");
         }
-        this.prize = p;
-        this.finished = false;
+
+        this.prize = Objects.requireNonNull(prize, "Deve ter um premio.");
+        this.state = EstadoMissao.INATIVO;
     }
 
     public Recompensa endMission(){
-        if (finished)
-            throw new IllegalStateException("Mission has already been finished.");
-        finished = true;
-        System.out.println("Mission finished.");
+        if (state == EstadoMissao.COMPLETO)
+            throw new IllegalStateException("Missão já foi completa.");
+        this.state = EstadoMissao.COMPLETO;
+
+        System.out.println("Missão finalizada.");
         return prize;
     }
 
     @Override
     public String toString(){
-        return String.format("Mission:\n%s\nPrize: \n%s\nFinished:%b", title, prize, finished);
+        return "Titulo: " + title + " | " + prize + " | Estado: " + state;
     }
-
 }

@@ -1,6 +1,5 @@
 // import com.personagem.*;
 // import com.inventario.*;
-// import com.missao.*;
 import com.recompensa.*;
 
 public class Main{
