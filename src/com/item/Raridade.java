@@ -1,4 +1,4 @@
-package com.recompensa;
+package com.item;
 
 public enum Raridade {
     COMUM,
