@@ -1,40 +1,21 @@
 package com.missao;
 
 import java.util.Objects;
+import com.item.*;
 
 public final class Recompensa {
-    private final String item;
-    private int quantidade;
-    private final TipoItem tipo;
-    private final Raridade raridade;
+    private final Item item;
 
-    // Construtor
-    public Recompensa(String item, int quantidade, TipoItem tipo, Raridade raridade){
-        this.item = Objects.requireNonNull(item, "Item é obrigatório.").trim();
-        this.tipo = Objects.requireNonNull(tipo, "Tipo é obrigatótio.");
-        this.raridade = Objects.requireNonNull(raridade, "Raridade é obrigatório.");
-
-        if(this.item.isEmpty()){
-            throw new IllegalArgumentException("Item não pode ficar vazio.");
-        }
-        if(quantidade < 0){
-            throw new IllegalArgumentException("Quantidade não ser um valor negativo.");
-        }
-        
-        this.quantidade = quantidade;
+    // Construtors
+    public Recompensa (Item item){
+        this.item = Objects.requireNonNull(item);
     }
-
-    // Getters
-    public String getItem(){ return item; }
-
-    public int getQuantidade(){ return quantidade; }
-
-    public TipoItem getTipoItem(){ return tipo; }
-
-    public Raridade getRaridade(){ return raridade; }
+    public Recompensa(String item, int quantidade, TipoItem tipo, Raridade raridade){
+        this.item = new Item(item, tipo, raridade, quantidade);
+    }
 
     @Override
     public String toString(){
-        return "Recompensa: " + item + " | Quantidade: " + quantidade + " | Tipo do item: " + tipo + " | Raridade: " + raridade;
+        return item.toString();
     }
 }

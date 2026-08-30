@@ -26,11 +26,7 @@ public class Item{
 
     }
 
-    // [ II ] METHODS
-
-
-
-    // [ III ] OVERRIDE METHODS
+    // [ II ] OVERRIDE METHODS
     @Override
     public String toString(){
         return String.format("%s | Tipo: %s | Raridade: %s | Quantidade: %d", name, type, rarity, quantity);

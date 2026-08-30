@@ -16,7 +16,7 @@
 #### Other things:
 - [X] atributos protegidos com private;
 - [X] métodos responsáveis por alterar o estado dos objetos;
-- [ ] pelo menos uma associação;
+- [X] pelo menos uma associação;
 - [ ] pelo menos uma agregação;
 - [ ] pelo menos uma composição;
 - [X] utilização dos três enum;
