@@ -38,6 +38,6 @@ public final class Recompensa {
 
     @Override
     public String toString(){
-         return "Recompensa: " + item + " | Quantidade: " + quantidade + " | Tipo do item: " + tipo + " | Raridade: " + raridade;
+        return "Recompensa: " + item + " | Quantidade: " + quantidade + " | Tipo do item: " + tipo + " | Raridade: " + raridade;
     }
 }

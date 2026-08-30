@@ -1,24 +1,7 @@
 package com.personagem;
 
-import enums.estadomissao.EstadoMissao;
+import com.missao.Missao;
 
-public class Aventureiro {
-    private final String nome;
-    private float vida;
-    private EstadoMissao missao;
-
-
-    public Aventureiro(String nome){
-        this.nome = nome;
-        this.vida = 100;
-        this.missao = EstadoMissao.INATIVO;
-    }
-
-    public String getNome(){
-        return this.nome;
-    }
-
-    public float getVida(){
-        return this.vida;
-    }
+class Aventureiro extends Personagem{
+    
 }
