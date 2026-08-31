@@ -29,7 +29,6 @@ public class Missao{
             throw new IllegalStateException("Missão já foi completa.");
         this.state = EstadoMissao.COMPLETO;
 
-        System.out.println("Missão finalizada.");
         return prize;
     }
 

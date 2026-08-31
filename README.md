@@ -4,7 +4,7 @@
 #### Specifications:
 - Classes
     - [X] Aventureiro
-    - [ ] Inventário
+    - [X] Inventário
     - [X] Item
     - [X] Missao
     - [X] Recompensa
@@ -18,8 +18,8 @@
 - [X] métodos responsáveis por alterar o estado dos objetos;
 - [X] pelo menos uma associação;
 - [X] pelo menos uma agregação;
-- [ ] pelo menos uma composição;
+- [X] pelo menos uma composição;
 - [X] utilização dos três enum;
-- [ ] coleções quando houver multiplicidade, por exemplo: ```List<Item>```;
+- [X] coleções quando houver multiplicidade, por exemplo: ```List<Item>```;
 - [X] validações que impeçam estados inválidos;
 - [X] uma classe Main demonstrando o funcionamento.

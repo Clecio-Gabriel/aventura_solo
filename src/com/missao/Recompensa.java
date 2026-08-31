@@ -6,7 +6,7 @@ import com.item.*;
 public final class Recompensa {
     private final Item item;
 
-    // Construtors
+    // [ I ] CONSTRUCTORS
     public Recompensa (Item item){
         this.item = Objects.requireNonNull(item);
     }
@@ -14,6 +14,12 @@ public final class Recompensa {
         this.item = new Item(item, tipo, raridade, quantidade);
     }
 
+    // [ II ] METHODS
+    public Item receive(){
+        return item;
+    }
+
+    // [ III ] OVERRIDE METHODS
     @Override
     public String toString(){
         return item.toString();

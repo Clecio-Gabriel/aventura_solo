@@ -20,7 +20,7 @@ public class Item{
         this.type = Objects.requireNonNull(type);
         this.rarity = Objects.requireNonNull(rarity);
         
-        if (!(quantity>=1))
+        if (quantity < 1)
             throw new IllegalArgumentException("A quantia deve ser maior ou igual a 1.");
         this.quantity = quantity;
 
