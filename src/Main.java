@@ -31,6 +31,10 @@ public class Main{
 
         System.out.println(a1 + "\n\n");
 
+        a1.end_mission();
+
+        System.out.println(a1);
+
     }
 
 }

@@ -1,7 +1,7 @@
 package com.personagem;
 
 import java.util.Objects;
-import com.missao.Missao;
+import com.missao.*;
 
 public class Aventureiro extends Personagem{
     
@@ -22,7 +22,10 @@ public class Aventureiro extends Personagem{
         System.out.printf("%s accepted a mission!%nMission:%n%s%n%n", this.name, this.mission);
     }
     public void end_mission(){
-        // WILL IMPLEMENT THIS IN THE NEAR FUTURE
+        Recompensa prize = this.mission.endMission();
+        inv.add_item(prize.receive());
+        mission = null;
+        System.out.printf("MISSION SUCCESS!\nWell done, %s.%n%n", this.name);
     }
 
     // [ III ] OVERRIDE METHODS
