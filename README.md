@@ -1,5 +1,10 @@
 ## THIS IS A GROUP PROJECT I'M DOING IN UNIVERSITY, USING THE JAVA LANG.
 
+### Contributors
+
+- Clecio-Gabriel
+- Luccas-Ribeiro
+
 ### What is left to implement:
 #### Specifications:
 - Classes
