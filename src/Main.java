@@ -13,9 +13,13 @@ public class Main{
         System.out.println(prize + "\n\n");
 
         Missao m1 = new Missao("Mate o caba", prize);
-        System.out.println(m1);
+        System.out.println(m1 + "\n\n");
 
-        
+        Aventureiro a1 = new Aventureiro("Jorge");
+        System.out.println(a1 + "\n\n");
+
+        a1.set_mission(m1);
+        System.out.println(a1);
 
     }
 

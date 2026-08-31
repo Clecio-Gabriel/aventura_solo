@@ -18,6 +18,12 @@ public class Missao{
         this.state = EstadoMissao.INATIVO;
     }
 
+    // METHODS
+    public void startMission(){
+        if (state != EstadoMissao.INATIVO)
+            throw new IllegalStateException("Missão já está ativa ou foi completada.");
+        this.state = EstadoMissao.ATIVO;
+    }
     public Recompensa endMission(){
         if (state == EstadoMissao.COMPLETO)
             throw new IllegalStateException("Missão já foi completa.");

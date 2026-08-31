@@ -5,7 +5,7 @@ import com.missao.Missao;
 
 public class Aventureiro extends Personagem{
     
-    Missao mission;
+    private Missao mission;
 
     // [ I ] CONSTRUCTORS
     public Aventureiro(String name){
@@ -18,6 +18,7 @@ public class Aventureiro extends Personagem{
     // [ II ] METHODS
     public void set_mission(Missao mission){
         this.mission = Objects.requireNonNull(mission);
+        this.mission.startMission();
     }
 
     // [ III ] OVERRIDE METHODS
