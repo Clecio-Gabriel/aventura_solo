@@ -7,7 +7,7 @@ import com.item.Item;
 public class Inventario {
     
     //===DATA
-    private ArrayList<Item> items;
+    private final ArrayList<Item> items;
     private int item_qnt;
 
     //  [ I ] CONSTRUCTOR
@@ -22,11 +22,18 @@ public class Inventario {
         items.add(inp);
         this.item_qnt++;
     }
-    public void print_inv(){
-        System.out.println("    ====Inventory contents====\n");
+    public boolean empty(){ return items.isEmpty(); }
+
+    //  [ III ] OVERRIDE METHODS
+    @Override
+    public String toString(){
+        StringBuilder ret = new StringBuilder();
+
         for (int i = 0; i < item_qnt; i++){
-            System.out.printf("#%d   %s%n", i+1, items.get(i));
+            ret.append(String.format("#%d   %s%n", i+1, items.get(i)));
         }
+
+        return ret.toString();
     }
 
 }

@@ -20,13 +20,17 @@ public class Aventureiro extends Personagem{
         this.mission = Objects.requireNonNull(mission);
         this.mission.startMission();
     }
+    public void end_mission(){
+        
+    }
 
     // [ III ] OVERRIDE METHODS
     @Override
     public String toString(){
-        return String.format("%s (%d Energy left.).%n%s", this.name, this.life, 
-        (this.mission == null) ? ("Sem missão ativa.") : this.mission
-        );
+        return String.format("%s (%d Energy left.).%n%s%n   ===%s's inventory===%n%s", this.name, 
+                             this.life, (this.mission == null) ? ("Sem missão ativa.") : this.mission, 
+                             this.name, (this.inv.empty()) ? ("   Empty.") : this.inv
+                            );
     }
 
 }

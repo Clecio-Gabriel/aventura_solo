@@ -1,7 +1,7 @@
 package com.personagem;
 
+import com.item.Item;
 import com.personagem.inventario.Inventario;
-import com.missao.Recompensa;
 
 public class Personagem{
 
@@ -20,8 +20,8 @@ public class Personagem{
     }
     
     // [ II ] METHODS
-    public void receive(Recompensa prize){
-        // this.energy += prize.getEnergy();
+    public void add_item(Item item){
+        inv.add_item(item);
     }
     public void rest(){
         this.life += 10;
@@ -29,7 +29,6 @@ public class Personagem{
 
 
     // [ III ] OVERRIDE METHODS
-
     @Override
     public String toString(){
         return String.format("%s (%d Energy left).", this.name, this.life);

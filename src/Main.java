@@ -1,5 +1,4 @@
 import com.item.*;
-import com.personagem.inventario.*;
 import com.missao.*;
 import com.personagem.*;
 
@@ -23,11 +22,10 @@ public class Main{
 
         Item i2 = new Item("Espada de Madeira", TipoItem.ARMAMENTO, Raridade.COMUM, 1);
 
-        Inventario inv = new Inventario();
-        inv.add_item(i1);
-        inv.add_item(i2);
-        
-        inv.print_inv();
+        a1.add_item(i1);
+        a1.add_item(i2);
+
+        System.out.println(a1);
 
     }
 
