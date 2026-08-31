@@ -22,11 +22,8 @@ public class Personagem{
     // [ II ] METHODS
     public void add_item(Item item){
         inv.add_item(item);
+        System.out.printf("%s got an item!%nItem: %s%n%n", this.name, item);
     }
-    public void rest(){
-        this.life += 10;
-    }
-
 
     // [ III ] OVERRIDE METHODS
     @Override
