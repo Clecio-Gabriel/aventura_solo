@@ -19,7 +19,15 @@ public class Main{
         System.out.println(a1 + "\n\n");
 
         a1.set_mission(m1);
-        System.out.println(a1);
+        System.out.println(a1 + "\n\n");
+
+        Item i2 = new Item("Espada de Madeira", TipoItem.ARMAMENTO, Raridade.COMUM, 1);
+
+        Inventario inv = new Inventario();
+        inv.add_item(i1);
+        inv.add_item(i2);
+        
+        inv.print_inv();
 
     }
 

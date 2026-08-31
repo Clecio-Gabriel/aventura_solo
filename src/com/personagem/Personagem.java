@@ -1,11 +1,13 @@
 package com.personagem;
 
+import com.personagem.inventario.Inventario;
 import com.missao.Recompensa;
 
 public class Personagem{
 
     protected final String name;
     protected int life;
+    protected Inventario inv;
 
     // [ I ] CONSTRUCTORS
     public Personagem(String name){
@@ -14,6 +16,7 @@ public class Personagem{
     public Personagem(String name, int life){
         this.name = name;
         this.life = life;
+        this.inv = new Inventario();
     }
     
     // [ II ] METHODS
