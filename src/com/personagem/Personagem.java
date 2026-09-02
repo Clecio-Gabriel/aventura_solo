@@ -18,11 +18,11 @@ public abstract class Personagem{
     }
     
     // [ II ] METHODS
-    public void add_item(Item item){
+    public final void add_item(Item item){
         inv.add_item(item);
         System.out.printf("%s got an item!%nItem: %s%n%n", this.name, item);
     }
-    public void starting_inventory(ArrayList <Item> items){
+    public final void starting_inventory(ArrayList <Item> items){
         this.inv = new Inventario();
         for (Item item : items)
             inv.add_item(item);
