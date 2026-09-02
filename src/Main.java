@@ -1,6 +1,6 @@
 import com.item.*;
 import com.missao.*;
-import com.personagem.*;
+import com.personagem.player.*;
 
 public class Main{
 
@@ -12,7 +12,7 @@ public class Main{
         Item i2 = new Item("Espada de Madeira", TipoItem.ARMAMENTO, Raridade.COMUM, 1);
         System.out.println(i1 + "\n\n" + i2 + "\n\n");
 
-        Player a1 = new Player("Jorge");
+        Player a1 = new Guerreiro("Jorge");
         System.out.println(a1 + "\n\n");
 
         a1.add_item(i1);
@@ -33,7 +33,10 @@ public class Main{
 
         a1.end_mission();
 
-        System.out.println(a1);
+        System.out.println(a1 + "\n\n");
+
+        Player a3 = new Mago("Ronaldo", 20);
+        System.out.println(a3);
 
     }
 
