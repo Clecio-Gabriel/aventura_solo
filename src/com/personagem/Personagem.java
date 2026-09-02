@@ -3,16 +3,13 @@ package com.personagem;
 import com.item.Item;
 import com.personagem.inventario.Inventario;
 
-public class Personagem{
+public abstract class Personagem{
 
     protected final String name;
     protected int life;
     protected Inventario inv;
 
     // [ I ] CONSTRUCTORS
-    public Personagem(String name){
-        this(name, 100);
-    }
     public Personagem(String name, int life){
         this.name = name;
         this.life = life;
@@ -27,8 +24,6 @@ public class Personagem{
 
     // [ III ] OVERRIDE METHODS
     @Override
-    public String toString(){
-        return String.format("%s (%d Energy left).", this.name, this.life);
-    }
+    public abstract String toString();
 
 }
