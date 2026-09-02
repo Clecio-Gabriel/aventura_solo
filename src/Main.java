@@ -12,7 +12,7 @@ public class Main{
         Item i2 = new Item("Espada de Madeira", TipoItem.ARMAMENTO, Raridade.COMUM, 1);
         System.out.println(i1 + "\n\n" + i2 + "\n\n");
 
-        Aventureiro a1 = new Aventureiro("Jorge");
+        Player a1 = new Player("Jorge");
         System.out.println(a1 + "\n\n");
 
         a1.add_item(i1);

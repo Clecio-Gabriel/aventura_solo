@@ -1,17 +1,17 @@
 package com.personagem;
 
-import java.util.Objects;
 import com.missao.*;
+import java.util.Objects;
 
-public class Aventureiro extends Personagem{
+public class Player extends Personagem{
     
     private Missao mission;
 
     // [ I ] CONSTRUCTORS
-    public Aventureiro(String name){
+    public Player(String name){
         super(name, 100);
     }
-    public Aventureiro(String name, int life){
+    public Player(String name, int life){
         super(name, life);
     }
 
