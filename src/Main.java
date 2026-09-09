@@ -5,7 +5,7 @@ import com.personagem.player.*;
 public class Main{
 
     public static void main(String[] args){
-    
+
         //  TEST #1
         System.out.println("    TEST #1 -> Testing Items and inventory");
         Item i1 = new Item("Poção", TipoItem.CONSUMIVEL, Raridade.COMUM, 1);
