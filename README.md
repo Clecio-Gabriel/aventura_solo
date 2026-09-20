@@ -7,7 +7,7 @@
 
 ### What is left to implement:
 - [ ] Create the ItemBuilder class
-- [ ] Create the Item subclasses
+- [X] Create the Item subclasses
 - [ ] Create the MissionBuilder class and a TipoMissao enum
 - [ ] Create the Mission subclasses (FetchQuest and HuntQuest, for now)
 - [ ] Create the Inimigo subpackage, inside the com.personagem package

@@ -13,7 +13,7 @@ public final class Consumivel extends Item{
 
     @Override
     public String toString(){
-        return String.format("%s | Consumível | Raridade: %s | Quantidade: %i%nCura: %i",
+        return String.format("%s | Consumível | Raridade: %s | Quantidade: %d%nCura: %d",
                              this.get_name(), this.get_raridade(), this.get_quantity(), this.heal);
     }
 }

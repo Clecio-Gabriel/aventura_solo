@@ -13,7 +13,7 @@ public final class Armadura extends Item{
 
     @Override
     public String toString(){
-        return String.format("%s | Armadura | Raridade: %s | Quantidade: %i%nDefesa: %i",
+        return String.format("%s | Armadura | Raridade: %s | Quantidade: %d%nDefesa: %d",
                              this.get_name(), this.get_raridade(), this.get_quantity(), this.defense);
     }
 }
