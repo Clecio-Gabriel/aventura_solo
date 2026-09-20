@@ -6,6 +6,12 @@ public class Main{
 
     public static void main(String[] args){
 
+        // Player p1 = new Mago("Reginaldo");
+        // System.out.println(p1 + "\n\n");
+        // Item i5 = new Item("Test", TipoItem.ARMAMENTO, Raridade.LENDARIO, 1);
+        // p1.add_item(i5);
+        // System.out.println(p1);
+
         //  TEST #1
         System.out.println("    TEST #1 -> Testing Items and inventory");
         Item i1 = new Item("Poção", TipoItem.CONSUMIVEL, Raridade.COMUM, 1);
