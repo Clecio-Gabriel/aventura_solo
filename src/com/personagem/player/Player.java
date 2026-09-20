@@ -13,12 +13,12 @@ public abstract class Player extends Personagem{
     private Missao mission;
 
     // [ I ] CONSTRUCTORS
-    public Player(String name){
-        this(name, 100);
-    }
     public Player(String name, int life){
         super(name, life);
         this.inv = new Inventario();
+    }
+    public Player(String name){
+        this(name, 100);
     }
 
     // [ II ] METHODS
