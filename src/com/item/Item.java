@@ -25,6 +25,7 @@ public abstract class Item{
     }
 
     // [ II ] METHODS
+    protected final String get_name(){ return this.name; }
     protected final Raridade get_raridade(){ return this.rarity; }
     protected final int get_quantity() { return quantity; }
     @Override
