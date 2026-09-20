@@ -1,9 +1,10 @@
-package com.personagem;
+package com.personagem.player;
 
 import com.missao.*;
+import com.personagem.*;
 import java.util.Objects;
 
-public class Player extends Personagem{
+public abstract class Player extends Personagem{
     
     private Missao mission;
 
