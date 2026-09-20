@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public abstract class Personagem{
 
-    protected final String name;
+    private final String name;
     protected int life;
     protected Inventario inv;
 
@@ -16,8 +16,9 @@ public abstract class Personagem{
         this.life = life;
         this.inv = new Inventario();
     }
-    
+
     // [ II ] METHODS
+    protected final String get_name(){ return this.name; }
     public final void add_item(Item item){
         inv.add_item(item);
         System.out.printf("%s got an item!%nItem: %s%n%n", this.name, item);
