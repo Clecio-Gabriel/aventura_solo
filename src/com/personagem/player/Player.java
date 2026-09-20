@@ -1,23 +1,36 @@
 package com.personagem.player;
 
-import com.missao.*;
-import com.personagem.*;
-import com.personagem.inventario.Inventario;
 import java.util.Objects;
+import java.util.ArrayList;
+import com.missao.*;
+import com.personagem.Personagem;
+import com.item.Item;
+import com.personagem.inventario.Inventario;
 
 public abstract class Player extends Personagem{
 
+    private Inventario inv;
     private Missao mission;
 
     // [ I ] CONSTRUCTORS
     public Player(String name){
-        super(name, 100);
+        this(name, 100);
     }
     public Player(String name, int life){
         super(name, life);
+        this.inv = new Inventario();
     }
 
     // [ II ] METHODS
+    public final void add_item(Item item){
+        inv.add_item(item);
+        System.out.printf("%s got an item!%nItem: %s%n%n", this.get_name(), item);
+    }
+    public final void starting_inventory(ArrayList <Item> items){
+        this.inv = new Inventario();
+        for (Item item : items)
+            inv.add_item(item);
+    }
     public void set_mission(Missao mission){
         this.mission = Objects.requireNonNull(mission);
         this.mission.startMission();
