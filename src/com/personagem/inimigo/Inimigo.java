@@ -9,4 +9,9 @@ public abstract class Inimigo extends Personagem {
     public Inimigo(String name, int life){
         super(name, life);
     }
+
+    public abstract void attack();
+
+    @Override
+    public abstract String toString();
 }
