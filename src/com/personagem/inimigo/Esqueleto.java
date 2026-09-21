@@ -1,3 +1,5 @@
+package com.personagem.inimigo;
+
 public class Esqueleto extends Inimigo{
 
     private final int strength;
