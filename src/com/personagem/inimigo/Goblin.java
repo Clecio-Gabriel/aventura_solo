@@ -1,5 +1,3 @@
-import com.personagem.inimigo.Inimigo;
-
 public class Goblin extends Inimigo{
 
     private final int strength;
