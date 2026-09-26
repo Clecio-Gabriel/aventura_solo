@@ -17,14 +17,15 @@ public class Goblin extends Inimigo{
     }
 
     @Override
-    public void attack(Personagem p){
+    public void attack(Personagem target){
         System.out.printf("%s attack furiously!", this.get_name());
-        p.takeDamage(this.strength);
+        target.takeDamage(this.strength);
     }
 
     @Override
     public void die(){
         System.out.printf("%s died and dropped some gold coins.");
+        //possibilidade de implementar ganho de moedas
     }
 
     @Override
