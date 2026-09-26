@@ -1,5 +1,7 @@
 package com.personagem.inimigo;
 
+import com.personagem.Personagem;
+
 public class Goblin extends Inimigo{
 
     private final int strength;
@@ -15,12 +17,18 @@ public class Goblin extends Inimigo{
     }
 
     @Override
-    public void attack(){
+    public void attack(Personagem p){
+        System.out.printf("%s attack furiously!", this.get_name());
+        p.takeDamage(this.strength);
+    }
 
+    @Override
+    public void die(){
+        System.out.printf("%s died and dropped some gold coins.");
     }
 
     @Override
     public String toString(){
-        return String.format("");
+        return String.format("%s | life: %d | is alive: %b", get_name(), life, isAlive());
     }
 }

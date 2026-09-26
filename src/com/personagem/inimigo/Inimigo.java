@@ -1,6 +1,7 @@
 package com.personagem.inimigo;
 
 import com.personagem.Personagem;
+
 public abstract class Inimigo extends Personagem {
 
     public Inimigo(String name){
@@ -10,7 +11,9 @@ public abstract class Inimigo extends Personagem {
         super(name, life);
     }
 
-    public abstract void attack();
+    public boolean isAlive(){
+        return this.life > 0;
+    }
 
     @Override
     public abstract String toString();
