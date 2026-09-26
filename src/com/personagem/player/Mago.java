@@ -1,5 +1,7 @@
 package com.personagem.player;
 
+import com.personagem.Personagem;
+
 public class Mago extends Player{
 
     private int mana;
@@ -11,4 +13,9 @@ public class Mago extends Player{
         super(name, life);
     }
 
+    @Override
+    public void attack(Personagem target){}
+
+    @Override
+    public void die(){}
 }
