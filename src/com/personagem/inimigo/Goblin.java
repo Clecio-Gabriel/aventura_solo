@@ -18,18 +18,18 @@ public class Goblin extends Inimigo{
 
     @Override
     public void attack(Personagem target){
-        System.out.printf("%s attack furiously!", this.get_name());
+        System.out.printf("%s attack furiously!\n", this.get_name());
         target.takeDamage(this.strength);
     }
 
     @Override
     public void die(){
-        System.out.printf("%s died and dropped some gold coins.");
+        System.out.printf("%s died and dropped some gold coins.\n");
         //possibilidade de implementar ganho de moedas
     }
 
     @Override
     public String toString(){
-        return String.format("%s | life: %d | is alive: %b", get_name(), life, isAlive());
+        return String.format("%s | life: %d | is alive: %b\n", get_name(), life, isAlive());
     }
 }

@@ -17,7 +17,7 @@ public abstract class Personagem{
 
     public void takeDamage(int hit){
         this.life -= hit;
-        System.out.printf("%s took %d damage! Life: %d", this.name, hit, this.life);
+        System.out.printf("%s took %d damage! Life: %d\n", this.name, hit, this.life);
         if(this.life <= 0){
             die();
         }
