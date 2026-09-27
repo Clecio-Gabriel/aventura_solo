@@ -27,11 +27,11 @@ public class Esqueleto extends Inimigo{
     @Override
     public void die(){
         if(!revived){
-            System.out.printf("The %s shuddered and collapsed into a pile of bones. But it quickly reassembled itself!\n");
+            System.out.printf("The %s shuddered and collapsed into a pile of bones. But it quickly reassembled itself!\n", this.get_name());
             this.life = 50;
             this.revived = true;
         } else {
-            System.out.printf("The %s turned to dust. Among the dust, there were a few gold coins.\n");
+            System.out.printf("The %s turned to dust. Among the dust, there were a few gold coins.\n", this.get_name());
             //possibilidade de implementar ganho de moedas
         }
     }

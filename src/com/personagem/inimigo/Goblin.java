@@ -24,7 +24,7 @@ public class Goblin extends Inimigo{
 
     @Override
     public void die(){
-        System.out.printf("%s died and dropped some gold coins.\n");
+        System.out.printf("%s died and dropped some gold coins.\n", this.get_name());
         //possibilidade de implementar ganho de moedas
     }
 
