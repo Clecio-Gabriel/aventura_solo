@@ -21,8 +21,4 @@ public class Guerreiro extends Player{
         target.takeDamage(this.strength);
     }
 
-    @Override
-    public void die(){
-        System.out.printf("%s died.", this.get_name());
-    }
 }

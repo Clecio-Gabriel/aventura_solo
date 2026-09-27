@@ -14,6 +14,4 @@ public class Arqueiro extends Player{
     @Override
     public void attack(Personagem target){}
 
-    @Override
-    public void die(){}
 }

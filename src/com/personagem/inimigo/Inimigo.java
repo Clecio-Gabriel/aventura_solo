@@ -11,10 +11,4 @@ public abstract class Inimigo extends Personagem {
         super(name, life);
     }
 
-    public boolean isAlive(){
-        return this.life > 0;
-    }
-
-    @Override
-    public abstract String toString();
 }

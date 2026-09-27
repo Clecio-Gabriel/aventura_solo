@@ -14,7 +14,7 @@ public abstract class Personagem{
     // [ II ] METHODS
     public final String get_name(){ return this.name; }
     public int get_life(){ return this.life; }
-
+    public boolean isAlive(){ return this.life>0; }
     public void takeDamage(int hit){
         this.life -= hit;
         if(this.life < 0){ this.life = 0;}
@@ -23,9 +23,8 @@ public abstract class Personagem{
             die();
         }
     }
-
     public abstract void attack(Personagem p);
-    public abstract void die();
+    protected abstract void die();
 
     // [ III ] OVERRIDE METHODS
     @Override

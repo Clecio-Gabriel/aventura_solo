@@ -11,17 +11,20 @@ public abstract class Player extends Personagem{
 
     private Inventario inv;
     private Missao mission;
+    private int gold;
 
     // [ I ] CONSTRUCTORS
     public Player(String name, int life){
         super(name, life);
         this.inv = new Inventario();
+        this.gold = 0;
     }
     public Player(String name){
         this(name, 100);
     }
 
     // [ II ] METHODS
+    public final int gold_qnty(){ return this.gold; }
     public final void add_item(Item item){
         inv.add_item(item);
         System.out.printf("%s got an item!%nItem: %s%n%n", this.get_name(), item);
@@ -50,6 +53,10 @@ public abstract class Player extends Personagem{
                              this.life, (this.mission == null) ? ("Sem missão ativa.") : this.mission,
                              this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv
                             );
+    }
+    @Override
+    public void die(){
+        System.out.printf("%s died.", this.get_name());
     }
 
 }

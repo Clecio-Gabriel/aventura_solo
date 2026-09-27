@@ -16,6 +16,4 @@ public class Mago extends Player{
     @Override
     public void attack(Personagem target){}
 
-    @Override
-    public void die(){}
 }
