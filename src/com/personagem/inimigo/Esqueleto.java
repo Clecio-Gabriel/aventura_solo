@@ -6,14 +6,12 @@ public class Esqueleto extends Inimigo{
 
     private boolean revived;
     private final int strength;
-    private final int init_life;
 
     public Esqueleto(String name){
         this(name, 100, 7);
     }
     public Esqueleto(String name, int life, int strength){
         super(name, life);
-        this.init_life = life;
         this.revived = false;
         this.strength = strength;
     }
@@ -28,7 +26,7 @@ public class Esqueleto extends Inimigo{
     public void die(){
         if(!revived){
             System.out.printf("The %s shuddered and collapsed into a pile of bones. But it quickly reassembled itself!\n", this.get_name());
-            this.life = this.init_life / 2;
+            this.heal(this.get_init_life() / 2);
             this.revived = true;
         } else {
             System.out.printf("The %s turned to dust. Among the dust, there were a few gold coins.\n", this.get_name());

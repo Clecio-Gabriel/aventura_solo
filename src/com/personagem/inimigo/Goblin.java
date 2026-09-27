@@ -30,6 +30,6 @@ public class Goblin extends Inimigo{
 
     @Override
     public String toString(){
-        return String.format("%s | life: %d | is alive: %b\n", get_name(), life, isAlive());
+        return String.format("%s | life: %d | is alive: %b\n", get_name(), get_life(), isAlive());
     }
 }

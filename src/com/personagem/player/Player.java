@@ -50,7 +50,7 @@ public abstract class Player extends Personagem{
     @Override
     public String toString(){
         return String.format("%s (%d Energy left.).%nActive Mission:%n%s%n   ===%s's inventory===%n%s", this.get_name(),
-                             this.life, (this.mission == null) ? ("Sem missão ativa.") : this.mission,
+                             this.get_life(), (this.mission == null) ? ("Sem missão ativa.") : this.mission,
                              this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv
                             );
     }
