@@ -96,6 +96,7 @@ public class GameMaster{
         System.out.println("INICIANDO O JOGO...\n\n");
         System.out.println(this.main_player);
         has_ended = true;
+
     }
 
 }

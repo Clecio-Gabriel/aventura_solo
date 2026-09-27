@@ -36,6 +36,13 @@ public abstract class Player extends Personagem{
         inv.add_item(item);
         System.out.printf("%s got an item!%nItem: %s%n%n", this.get_name(), item);
     }
+    public void use_item(int idx){
+        Item used = this.inv.get(idx);
+        used.interact(this);
+        if (used.get_quantity() > 0){
+            inv.add_item(used);
+        }
+    }
     public final void starting_inventory(ArrayList <Item> items){
         this.inv = new Inventario();
         for (Item item : items)

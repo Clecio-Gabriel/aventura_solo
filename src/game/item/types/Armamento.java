@@ -1,6 +1,7 @@
 package game.item.types;
 
 import game.item.*;
+import game.personagem.Personagem;
 
 public final class Armamento extends Item{
 
@@ -16,6 +17,8 @@ public final class Armamento extends Item{
 
     }
 
+    @Override
+    public void interact(Personagem p){ };
     @Override
     public String toString(){
         return String.format("%s | Armamento | Raridade: %s | Quantidade: %d%nForça: %d",
