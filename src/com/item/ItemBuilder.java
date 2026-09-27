@@ -26,12 +26,12 @@ public final class ItemBuilder{
 
         this.type = type;
         if (type == null){
-            throw new ItemCreationException("Null was passed as an argument for type in the " + name + "item.", new NullPointerException());
+            throw new ItemCreationException("Null was passed as an argument for type in the \"" + name + "\" item.", new NullPointerException());
         }
 
         this.rarity = rarity;
         if (rarity == null){
-            throw new ItemCreationException("Null was passed as an argument for rarity in the " + name + "item.", new NullPointerException());
+            throw new ItemCreationException("Null was passed as an argument for rarity in the \"" + name + "\" item.", new NullPointerException());
         }
 
         this.quantity = 1;
@@ -39,26 +39,34 @@ public final class ItemBuilder{
     }
 
     public ItemBuilder totalQuantity(int quantity){
-        try{
-            this.quantity = Math.max(1, Math.min(quantity, 100));
-        }catch (IllegalArgumentException e){
-            throw new ItemCreationException("Invalid argument given to quantity.", e);
+        if(quantity < 1 || quantity > 100){
+            throw new ItemCreationException("Invalid argument given to quantity.", new IllegalArgumentException());
         }
+        this.quantity = quantity;
 
         return this;
     }
     public ItemBuilder with_heal(int heal){
-        this.heal = heal;
         if (type != TipoItem.CONSUMIVEL){
-            throw new ItemCreationException("Heal can't be declared in an item that is not a consumable.", new IllegalArgumentException());
+            throw new ItemCreationException("Heal can't be declared in an item that is not a Consumível.", new IllegalArgumentException());
         }
+        this.heal = heal;
+
         return this;
     }
     public ItemBuilder with_defense(int defense){
+        if (type != TipoItem.ARMADURA){
+            throw new ItemCreationException("Defense can't be declared in an item that is not a Armadura.", new IllegalArgumentException());
+        }
         this.defense = defense;
+
         return this;
     }
     public ItemBuilder with_strength(int strength){
+        if (type != TipoItem.ARMAMENTO){
+            throw new ItemCreationException("Strength cannot be given to an item that isn't an Armamento", new IllegalArgumentException());
+        }
+
         this.strength = strength;
         return this;
     }
@@ -71,7 +79,7 @@ public final class ItemBuilder{
             case TipoItem.ARMAMENTO:
                 return new Armamento(name, rarity, quantity, strength);
             default:
-                throw new IllegalArgumentException("Invalid type of Item.");
+                throw new ItemCreationException("The item was not given a valid type.", new IllegalArgumentException());
         }
     }
 
