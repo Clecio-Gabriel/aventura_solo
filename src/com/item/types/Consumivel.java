@@ -8,7 +8,12 @@ public final class Consumivel extends Item{
 
     public Consumivel(String name, Raridade rarity, int quantity, int heal){
         super(name, rarity, quantity);
-        this.heal = Math.max(0, Math.min(heal, 100));
+        try{
+            this.heal = Math.max(0, Math.min(heal, 100));
+        }
+        catch(IllegalArgumentException e){
+            throw new ItemCreationException("Invalid argument given to the heal argument.", new IllegalArgumentException());
+        }
     }
 
     @Override

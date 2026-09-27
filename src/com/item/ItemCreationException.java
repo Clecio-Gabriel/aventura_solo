@@ -1,6 +1,6 @@
 package com.item;
 
-public final class ItemCreationException extends Exception{
+public final class ItemCreationException extends RuntimeException{
 
     public ItemCreationException(String msg){
         super(msg);

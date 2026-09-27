@@ -19,6 +19,8 @@ public class Main{
                   .build();
         System.out.println(i2);
 
+        Item i3 = new ItemBuilder("Espada de", null, null).build();
+
         // TEST #3
         System.out.println("\n\n\n    TEST #3 -> Testing enimies and attacks");
         Player a4 = new Guerreiro("Elias", 100, 90);
