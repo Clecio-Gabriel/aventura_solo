@@ -10,9 +10,9 @@ public final class Recompensa {
     public Recompensa (Item item){
         this.item = Objects.requireNonNull(item);
     }
-    public Recompensa(String item, int quantidade, TipoItem tipo, Raridade raridade){
-        this.item = new Item(item, tipo, raridade, quantidade);
-    }
+    // public Recompensa(String item, int quantidade, TipoItem tipo, Raridade raridade){
+    //     this.item = new Item(item, tipo, raridade, quantidade);
+    // }
 
     // [ II ] METHODS
     public Item receive(){
