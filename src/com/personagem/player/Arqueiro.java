@@ -1,5 +1,7 @@
 package com.personagem.player;
 
+import com.personagem.Personagem;
+
 public class Arqueiro extends Player{
 
     public Arqueiro(String name){
@@ -9,4 +11,9 @@ public class Arqueiro extends Player{
         super(name, life);
     }
 
+    @Override
+    public void attack(Personagem target){}
+
+    @Override
+    public void die(){}
 }

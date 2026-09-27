@@ -12,7 +12,20 @@ public abstract class Personagem{
     }
 
     // [ II ] METHODS
-    protected final String get_name(){ return this.name; }
+    public final String get_name(){ return this.name; }
+    public int get_life(){ return this.life; }
+
+    public void takeDamage(int hit){
+        this.life -= hit;
+        if(this.life < 0){ this.life = 0;}
+        System.out.printf("%s took %d damage! Life: %d\n", this.name, hit, this.life);
+        if(this.life <= 0){
+            die();
+        }
+    }
+
+    public abstract void attack(Personagem p);
+    public abstract void die();
 
     // [ III ] OVERRIDE METHODS
     @Override
