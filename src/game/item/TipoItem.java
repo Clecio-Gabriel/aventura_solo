@@ -1,4 +1,4 @@
-package com.item;
+package game.item;
 
 public enum TipoItem {
     ARMADURA,

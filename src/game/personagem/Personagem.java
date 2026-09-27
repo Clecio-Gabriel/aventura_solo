@@ -1,4 +1,4 @@
-package com.personagem;
+package game.personagem;
 
 public abstract class Personagem{
 

@@ -1,9 +1,7 @@
-import com.item.*;
-import com.personagem.*;
-import com.personagem.inimigo.*;
-import com.personagem.player.*;
-// import com.missao.*;
-// import com.personagem.player.*;
+import game.item.*;
+import game.personagem.*;
+import game.personagem.inimigo.*;
+import game.personagem.player.*;
 
 public class Main{
 

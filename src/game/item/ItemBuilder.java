@@ -1,6 +1,6 @@
-package com.item;
+package game.item;
 
-import com.item.types.*;
+import game.item.types.*;
 
 public final class ItemBuilder{
 

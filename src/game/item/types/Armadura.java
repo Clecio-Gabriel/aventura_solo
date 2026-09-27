@@ -1,6 +1,6 @@
-package com.item.types;
+package game.item.types;
 
-import com.item.*;
+import game.item.*;
 
 public final class Armadura extends Item{
 

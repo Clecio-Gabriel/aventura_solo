@@ -1,6 +1,6 @@
-package com.personagem.player;
+package game.personagem.player;
 
-import com.personagem.Personagem;
+import game.personagem.Personagem;
 
 public class Arqueiro extends Player{
 

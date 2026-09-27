@@ -1,11 +1,13 @@
-package com.personagem.player;
+package game.personagem.player;
 
 import java.util.Objects;
+
+import game.item.Item;
+import game.missao.*;
+import game.personagem.Personagem;
+import game.personagem.inventario.Inventario;
+
 import java.util.ArrayList;
-import com.missao.*;
-import com.personagem.Personagem;
-import com.item.Item;
-import com.personagem.inventario.Inventario;
 
 public abstract class Player extends Personagem{
 
