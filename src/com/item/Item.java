@@ -1,7 +1,5 @@
 package com.item;
 
-import java.util.Objects;
-
 public abstract class Item{
 
     //DATA
@@ -11,17 +9,9 @@ public abstract class Item{
 
     // [ I ] CONSTRUCTORS
     public Item(String name, Raridade rarity, int quantity){
-        this.name = Objects.requireNonNull(name).trim();
-        if (this.name.isEmpty()){
-            throw new IllegalArgumentException("O nome não pode ser vazio.");
-        }
-
-        this.rarity = Objects.requireNonNull(rarity);
-
-        if (quantity < 1)
-            throw new IllegalArgumentException("A quantia deve ser maior ou igual a 1.");
+        this.name = name;
+        this.rarity = rarity;
         this.quantity = quantity;
-
     }
 
     // [ II ] METHODS

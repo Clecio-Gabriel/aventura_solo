@@ -8,7 +8,12 @@ public final class Armamento extends Item{
 
     public Armamento(String name, Raridade rarity, int quantity, int strength){
         super(name, rarity, quantity);
-        this.strength = Math.max(0, Math.min(strength, 50));
+        if (strength < 1 || strength > 50){
+            throw new ItemCreationException("Invalid value given to strength.", new IllegalArgumentException())
+        }
+
+        this.strength = strength;
+
     }
 
     @Override

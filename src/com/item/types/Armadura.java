@@ -8,7 +8,12 @@ public final class Armadura extends Item{
 
     public Armadura(String name, Raridade rarity, int quantity, int defense){
         super(name, rarity, quantity);
-        this.defense = Math.max(0, Math.min(defense, 100));
+        if(defense < 1 || defense > 100){
+            throw new ItemCreationException("Invalid number given to defense.", new IllegalArgumentException());
+        }
+
+        this.defense = defense;
+
     }
 
     @Override
