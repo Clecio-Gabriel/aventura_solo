@@ -25,6 +25,10 @@ public abstract class Player extends Personagem{
 
     // [ II ] METHODS
     public final int gold_qnty(){ return this.gold; }
+    public void show_inventory(){
+        System.out.printf("   ===%s's inventory===%n%s%n", this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv);
+    }
+
     public final void add_item(Item item){
         inv.add_item(item);
         System.out.printf("%s got an item!%nItem: %s%n%n", this.get_name(), item);
@@ -33,6 +37,13 @@ public abstract class Player extends Personagem{
         this.inv = new Inventario();
         for (Item item : items)
             inv.add_item(item);
+    }
+    public void add_money(int money){
+        if (money < 0){
+            throw new IllegalArgumentException("Illegal argument for the add_money method.");
+        }
+
+        this.gold += money;
     }
     public void set_mission(Missao mission){
         this.mission = Objects.requireNonNull(mission);
@@ -49,9 +60,9 @@ public abstract class Player extends Personagem{
     // [ III ] OVERRIDE METHODS
     @Override
     public String toString(){
-        return String.format("%s (%d Energy left.).%nActive Mission:%n%s%n   ===%s's inventory===%n%s", this.get_name(),
-                             this.get_life(), (this.mission == null) ? ("Sem missão ativa.") : this.mission,
-                             this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv
+        return String.format("%s (%d Energy left.).%nGold: %d%nActive Mission:%n%s", this.get_name(),
+                             this.get_life(), this.gold,
+                             (this.mission == null) ? ("Sem missão ativa.") : this.mission
                             );
     }
     @Override

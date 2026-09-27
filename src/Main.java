@@ -1,4 +1,5 @@
 import com.item.*;
+import com.personagem.*;
 import com.personagem.inimigo.*;
 import com.personagem.player.*;
 // import com.missao.*;
@@ -14,32 +15,11 @@ public class Main{
                   .build();
         System.out.println(i2);
 
+        Player p1 = new Guerreiro("Paulo");
+        System.out.println(p1 + "\n");
+        p1.add_item(i2);
+        p1.show_inventory();
 
-        // TEST #3
-        System.out.println("\n\n\n    TEST #3 -> Testing enimies and attacks");
-        Player a4 = new Guerreiro("Elias", 100, 90);
-        Inimigo goblin = new Goblin("Gob");
-
-        a4.attack(goblin);
-        goblin.attack(a4);
-
-        System.out.println(goblin);
-
-        a4.attack(goblin);
-
-        System.out.println(goblin);
-
-        Inimigo clecio = new Esqueleto("Clecio the calcio", 101, 7);
-
-        a4.attack(clecio);
-
-        System.out.println(clecio);
-
-        a4.attack(clecio);
-        System.out.println(clecio);
-
-        a4.attack(clecio);
-        System.out.println(clecio);
     }
 
 }
