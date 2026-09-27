@@ -17,6 +17,6 @@
 - [ ] Refact the Recompensa class
 - [X] Refact the Player class (inventory is only usable for a Player class)
 - [ ] Create the interaction cycle (for test purposes)
-- [ ] Items Exceptions **CURRENTLY BEING DONE BY Clécio-Gabriel**
+- [X] Items Exceptions
 - [ ] Missao Exceptions
 - [ ] Personagem Exceptions
