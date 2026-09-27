@@ -8,15 +8,18 @@
 ### What is left to implement:
 - [X] Create the ItemBuilder class
 - [X] Create the Item subclasses
-- [ ] Create the MissionBuilder class and a TipoMissao enum
-- [ ] Create the Mission subclasses (FetchQuest and HuntQuest, for now)
+- [ ] Refact the Recompensa class
 - [X] Create the Inimigo subpackage, inside the com.personagem package
       (the Inimigo classes will all be derived from the Personagem class)
 - [X] Create the Interação interface for Personagem derived classes 
       (or just create abstract methods for this)
-- [ ] Refact the Recompensa class
 - [X] Refact the Player class (inventory is only usable for a Player class)
-- [ ] Create the interaction cycle (for test purposes)
+- [ ] Create the interaction cycle (for test purposes) **CURRENTLY BEING DONE BY Clécio-Gabriel**
 - [X] Items Exceptions
-- [ ] Missao Exceptions
-- [ ] Personagem Exceptions
+
+#### **LEAVE THIS FOR LATER:**
+- [ ] Create the PlayerBuilder
+- [ ] Missao Exceptions 
+- [ ] Personagem Exceptions 
+- [ ] Create the MissionBuilder class and a TipoMissao enum 
+- [ ] Create the Mission subclasses (FetchQuest and HuntQuest, for now)
