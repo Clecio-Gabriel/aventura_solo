@@ -9,7 +9,7 @@ public final class Armamento extends Item{
     public Armamento(String name, Raridade rarity, int quantity, int strength){
         super(name, rarity, quantity);
         if (strength < 1 || strength > 50){
-            throw new ItemCreationException("Invalid value given to strength.", new IllegalArgumentException())
+            throw new ItemCreationException("Invalid value given to strength.", new IllegalArgumentException());
         }
 
         this.strength = strength;
