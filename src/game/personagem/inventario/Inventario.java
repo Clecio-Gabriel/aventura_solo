@@ -1,11 +1,12 @@
-package com.personagem.inventario;
+package game.personagem.inventario;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import com.item.Item;
+
+import game.item.Item;
 
 public class Inventario {
-    
+
     //===DATA
     private final ArrayList<Item> items;
     private int item_qnt;

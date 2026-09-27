@@ -1,6 +1,6 @@
-package com.personagem.inimigo;
+package game.personagem.inimigo;
 
-import com.personagem.Personagem;
+import game.personagem.Personagem;
 
 public class Esqueleto extends Inimigo{
 

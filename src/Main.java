@@ -1,24 +1,14 @@
-import com.item.*;
-import com.personagem.*;
-import com.personagem.inimigo.*;
-import com.personagem.player.*;
-// import com.missao.*;
-// import com.personagem.player.*;
+import game.gamemaster.GameMaster;
 
 public class Main{
 
     public static void main(String[] args){
 
-        Item i2 = new ItemBuilder("Espada de Ferro", TipoItem.ARMAMENTO, Raridade.LENDARIO)
-                  .with_strength(50)
-                  .totalQuantity(1)
-                  .build();
-        System.out.println(i2);
-
-        Player p1 = new Guerreiro("Paulo");
-        System.out.println(p1 + "\n");
-        p1.add_item(i2);
-        p1.show_inventory();
+        GameMaster gm = new GameMaster();
+        gm.starting_game();
+        while(!gm.has_ended()){
+            gm.game_loop();
+        }
 
     }
 

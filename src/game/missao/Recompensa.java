@@ -1,7 +1,8 @@
-package com.missao;
+package game.missao;
 
 import java.util.Objects;
-import com.item.*;
+
+import game.item.*;
 
 public final class Recompensa {
     private final Item item;

@@ -1,4 +1,4 @@
-package com.missao;
+package game.missao;
 
 import java.util.Objects;
 

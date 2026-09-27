@@ -1,4 +1,4 @@
-package com.missao;
+package game.missao;
 
 public enum EstadoMissao {
     INATIVO,
