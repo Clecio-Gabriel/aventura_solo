@@ -52,28 +52,49 @@ public class GameMaster{
                             + "    3 - Arqueiro\n\n", name);
 
             //   [ 2 ] Getting the character's class
+            //   [ 2.1 ] Making the player choose
             correct_inp = false;
-            int option;
-            while(!correct_inp){
+            int option = 0;
+            do{
                 try{
                     System.out.printf("  > ");
                     option = scan.nextInt();
                     if (option < 1 || option > 3){
                         System.out.println("    Esse número não é válido... tente novamente.");
                     }
-                    else
-                        correct_inp = true;
+                    else correct_inp = true;
                 }catch(InputMismatchException e){
                     System.out.println("    Isso não é um número... tente novamente.");
                     scan.nextLine();
                 }
+            }while(!correct_inp);
+
+            //   [ 2.2 ] Based on his choice, create the Player object and display.
+            String chosen_class = "";
+            switch(option){
+                case 1:
+                    chosen_class = "Guerreiro";
+                    this.main_player = new Guerreiro(name);
+                    break;
+                case 2:
+                    chosen_class = "Mago";
+                    this.main_player = new Mago(name);
+                    break;
+                case 3:
+                    chosen_class = "Arqueiro";
+                    this.main_player = new Arqueiro(name);
+                    break;
             }
+            System.out.printf("    Então, você escolheu ser um %s.\n"
+                            + "    Ok, agora podemos iniciar o jogo.\n\n", chosen_class);
 
         }
 
     }
+
     public void game_loop(){
-        System.out.println("ENTERED GAME LOOP");
+        System.out.println("INICIANDO O JOGO...\n\n");
+        System.out.println(this.main_player);
         has_ended = true;
     }
 

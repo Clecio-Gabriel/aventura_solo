@@ -1,4 +1,4 @@
-import game.gamemaster.*;
+import game.gamemaster.GameMaster;
 
 public class Main{
 

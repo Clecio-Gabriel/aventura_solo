@@ -26,7 +26,8 @@ public abstract class Player extends Personagem{
     }
 
     // [ II ] METHODS
-    public final int gold_qnty(){ return this.gold; }
+    protected Missao get_missao(){ return this.mission; }
+    protected final int gold_qnty(){ return this.gold; }
     public void show_inventory(){
         System.out.printf("   ===%s's inventory===%n%s%n", this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv);
     }
@@ -60,13 +61,6 @@ public abstract class Player extends Personagem{
     }
 
     // [ III ] OVERRIDE METHODS
-    @Override
-    public String toString(){
-        return String.format("%s (%d Energy left.).%nGold: %d%nActive Mission:%n%s", this.get_name(),
-                             this.get_life(), this.gold,
-                             (this.mission == null) ? ("Sem missão ativa.") : this.mission
-                            );
-    }
     @Override
     public void die(){
         System.out.printf("%s died.", this.get_name());
