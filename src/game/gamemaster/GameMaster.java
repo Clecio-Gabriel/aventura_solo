@@ -17,13 +17,6 @@ public class GameMaster{
     private boolean has_ended;
     private Scanner scan;
 
-    protected enum Actions{
-        ATACAR,
-        USAR_ITEM,
-        VER_INVENTARIO,
-        VER_STATUS,
-    }
-
     public GameMaster(Scanner scan){ //will probably do a parser for this, after some time
         this.scan = scan;
         this.enemies = new ArrayList<>();
@@ -45,7 +38,7 @@ public class GameMaster{
                   .with_strength(20)
                   .build();
         Recompensa r2 = new Recompensa(p2, 12000000);
-        Missao m2 = new Missao("Mate o esqueleto pavoroso.", r2);
+        Missao m2 = new Missao("Mate o cadáver que teve sua carne roída por vermes.", r2);
         missoes.add(m2);
         Inimigo i2 = new Esqueleto("Brás Cubas");
         enemies.add(i2);
@@ -122,18 +115,88 @@ public class GameMaster{
         System.out.println("INICIANDO O JOGO...\n\n");
         for (int i = 0; i < missoes.size(); i++){
             Missao curr_mis = missoes.get(i);
-            System.out.printf("[ %d ] Missão:\n%s%n%n", (i + 1), curr_mis);
+            this.main_player.set_mission(curr_mis);
+            System.out.printf("\n[ %d ] Missão:\n%s%n%n", (i + 1), curr_mis);
             scan.nextLine();
 
             Inimigo curr = enemies.get(i);
             boolean in_fight = true;
             while(in_fight){
-                System.out.printf("INIMIGO: %s\n\nO que você deseja fazer?\n"
+                System.out.printf("\nINIMIGO: %s\n\nO que você deseja fazer?\n"
                                 + "    1 - Atacar\n"
                                 + "    2 - Usar Item\n"
                                 + "    3 - Ver Inventário\n"
                                 + "    4 - Ver Status\n", curr);
-                scan.nextLine();
+
+                boolean correct_inp = false;
+                int action = 0;
+                do{
+                    try{
+                        System.out.printf("  > ");
+                        action = scan.nextInt();
+                        if (action < 1 || action > 4){
+                            System.out.println("    Essa ação não existe. Tente novamente.");
+                        }
+                        else correct_inp = true;
+                    }catch(InputMismatchException e){
+                        System.out.println("    Isso não é um número... tente novamente.");
+                        scan.nextLine();
+                    }
+                }while(!correct_inp);
+
+                System.out.println();
+                switch(action){
+                    case 1:
+                        this.main_player.attack(curr);
+                        if (curr.isAlive())
+                            curr.attack(this.main_player);
+                        break;
+                    case 2:
+                        if (this.main_player.howmanyItems() == 0){
+                            System.out.println("Você não tem nenhum item.\n");
+                            break;
+                        }
+                        System.out.println("Que item você deseja usar?(Digite -1 se quiser sair desse menu)");
+                        correct_inp = false;
+                        int idx = 0;
+                        do{
+                            try{
+                                System.out.printf("  > ");
+                                idx = scan.nextInt();
+                                if (idx == -1) break;
+                                else if (idx < 1 || idx > this.main_player.howmanyItems()){
+                                    System.out.println("    Você nem tem esse tanto de itens. Tente novamente.");
+                                }
+                                else correct_inp = true;
+                            }catch(InputMismatchException e){
+                                System.out.println("    Isso não é um número... tente novamente.");
+                                scan.nextLine();
+                            }
+                        }while(!correct_inp);
+
+                        if (idx != -1)
+                            this.main_player.use_item(idx - 1);
+
+                        break;
+                    case 3:
+                        this.main_player.show_inventory();
+                        break;
+                    case 4:
+                        System.out.println(this.main_player + "\n");
+                        break;
+                }
+
+                if (!curr.isAlive()){
+                    this.main_player.end_mission();
+                    in_fight = false;
+                }
+
+                if (!this.main_player.isAlive()){
+                    this.has_ended = true;
+                    System.out.println("\n\n    Infelizmente, não foi dessa vez.\n"
+                                    +  "Tente mais uma vez o nosso jogo, aventureiro.\n");
+                    return;
+                }
 
             }
 
@@ -141,6 +204,12 @@ public class GameMaster{
 
         has_ended = true;
 
+    }
+
+    public void ending_screen(){
+        System.out.println("    Parabéns Aventureiro!\n"
+                         + "    Você foi capaz de concluir o nosso jogo.\n"
+                         + "    Espero que você tenha gostado");
     }
 
 }

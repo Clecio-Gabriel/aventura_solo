@@ -18,7 +18,7 @@ public class Goblin extends Inimigo{
 
     @Override
     public void attack(Personagem target){
-        System.out.printf("%s attack furiously!\n%d damage given.", this.get_name(), this.strength);
+        System.out.printf("%s attack furiously!\n%d damage given.\n", this.get_name(), this.strength);
         target.takeDamage(this.strength);
     }
 

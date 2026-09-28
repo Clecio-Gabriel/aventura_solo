@@ -11,6 +11,7 @@ public class Main{
             while(!gm.has_ended()){
                 gm.game_loop();
             }
+            gm.ending_screen();
         }
 
     }

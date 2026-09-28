@@ -9,19 +9,16 @@ public class Inventario {
 
     //===DATA
     private final LinkedList<Item> items;
-    private int item_qnt;
 
     //  [ I ] CONSTRUCTOR
     public Inventario(){
         this.items = new LinkedList<>();
-        this.item_qnt = 0;
     }
 
     //  [ II ] METHODS
     public void add_item(Item item){
         Item inp = Objects.requireNonNull(item); // will need to do smth to avoid duplicate items
         items.add(inp);
-        this.item_qnt++;
     }
     public Item get(int idx){
         Item used = items.get(idx);
@@ -29,13 +26,16 @@ public class Inventario {
         return used;
     }
     public boolean empty(){ return items.isEmpty(); }
+    public int size(){ return items.size(); }
 
     //  [ III ] OVERRIDE METHODS
     @Override
     public String toString(){
         StringBuilder ret = new StringBuilder();
 
-        for (int i = 0; i < item_qnt; i++){
+        int inv_size = items.size();
+
+        for (int i = 0; i < inv_size; i++){
             ret.append(String.format("#%d   %s%n", i+1, items.get(i)));
         }
 
