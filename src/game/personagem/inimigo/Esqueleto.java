@@ -35,6 +35,6 @@ public class Esqueleto extends Inimigo{
     }
     @Override
     public String toString(){
-        return String.format("%s | life: %d | alive: %b \n", this.get_name(), this.get_life(), isAlive());
+        return String.format("%s | ESQUELETO | life: %d | alive: %b \n", this.get_name(), this.get_life(), isAlive());
     }
 }
