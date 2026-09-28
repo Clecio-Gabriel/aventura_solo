@@ -14,7 +14,7 @@
 - [X] Create the Interação interface for Personagem derived classes 
       (or just create abstract methods for this)
 - [X] Refact the Player class (inventory is only usable for a Player class)
-- [ ] Create the interaction cycle (for test purposes) **CURRENTLY BEING DONE BY Clécio-Gabriel**
+- [X] Create the interaction cycle (for test purposes)
 - [X] Items Exceptions
 
 #### **LEAVE THIS FOR LATER:**
