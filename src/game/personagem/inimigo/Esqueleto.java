@@ -29,12 +29,12 @@ public class Esqueleto extends Inimigo{
             this.heal(this.get_init_life() / 2);
             this.revived = true;
         } else {
-            System.out.printf("The %s turned to dust. Among the dust, there were a few gold coins.\n", this.get_name());
+            System.out.printf("The %s turned to dust. Among the dust, there were a few good prizes.\n", this.get_name());
             //possibilidade de implementar ganho de moedas
         }
     }
     @Override
     public String toString(){
-        return String.format("%s | life: %d | alive: %b | revided: %b\n", this.get_name(), this.get_life(), isAlive(), revived);
+        return String.format("%s | life: %d | alive: %b \n", this.get_name(), this.get_life(), isAlive());
     }
 }

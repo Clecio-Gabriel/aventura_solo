@@ -8,7 +8,7 @@
 ### What is left to implement:
 - [X] Create the ItemBuilder class
 - [X] Create the Item subclasses
-- [ ] Refact the Recompensa class
+- [X] Refact the Recompensa class ***kinda, but, i'll do a better one later***
 - [X] Create the Inimigo subpackage, inside the com.personagem package
       (the Inimigo classes will all be derived from the Personagem class)
 - [X] Create the Interação interface for Personagem derived classes 
@@ -19,6 +19,7 @@
 
 #### **LEAVE THIS FOR LATER:**
 - [ ] Create the PlayerBuilder
+- [ ] Remake the Recompensa class
 - [ ] Missao Exceptions 
 - [ ] Personagem Exceptions 
 - [ ] Create the MissionBuilder class and a TipoMissao enum 

@@ -31,6 +31,7 @@ public abstract class Player extends Personagem{
     public void show_inventory(){
         System.out.printf("   ===%s's inventory===%n%s%n", this.get_name(), (this.inv.empty()) ? ("   Empty.") : this.inv);
     }
+    public int howmanyItems(){ return this.inv.size(); }
 
     public final void add_item(Item item){
         inv.add_item(item);
@@ -58,14 +59,14 @@ public abstract class Player extends Personagem{
     public void set_mission(Missao mission){
         this.mission = Objects.requireNonNull(mission);
         this.mission.startMission();
-        System.out.printf("%s accepted a mission!%nMission:%n%s%n%n", this.get_name(), this.mission);
+        System.out.printf("\n\n%s accepted a mission!%nMission:%n%s%n%n", this.get_name(), this.mission);
     }
     public void end_mission(){
         Recompensa prize = this.mission.endMission();
         this.add_money(prize.get_gold());
         inv.add_item(prize.receive());
         mission = null;
-        System.out.printf("MISSION SUCCESS!\nWell done, %s.%nYour prize was:%n%s%n%d Gold.",
+        System.out.printf("\n\nMISSION SUCCESS!\nWell done, %s.%nYour prize was:%n%s%n%d Gold.\n\n",
                           this.get_name(), prize.receive(), prize.get_gold());
     }
 

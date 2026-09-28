@@ -24,6 +24,6 @@ public final class Recompensa {
     // [ III ] OVERRIDE METHODS
     @Override
     public String toString(){
-        return item.toString();
+        return item.toString() + "\nGold: " + gold;
     }
 }

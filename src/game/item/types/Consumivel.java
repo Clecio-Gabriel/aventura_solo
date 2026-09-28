@@ -21,6 +21,7 @@ public final class Consumivel extends Item{
     public void interact(Personagem p){
         p.heal(heal);
         this.change_qnty(-1);
+        System.out.printf("\n%s recuperou %d de vida.\n", p.get_name(), this.heal);
     }
     @Override
     public String toString(){
