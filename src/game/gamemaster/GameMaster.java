@@ -20,6 +20,23 @@ public class GameMaster{
         this.enemies = new ArrayList<>();
         this.missoes = new ArrayList<>();
         this.has_ended = false;
+
+        // FIRST MISSION
+        Item p1 = new ItemBuilder("Poção de cura", TipoItem.CONSUMIVEL, Raridade.RARO)
+                  .with_heal(50)
+                  .build();
+        Recompensa r1 = new Recompensa(p1, 100);
+        Missao m1 = new Missao("Mate o goblin da floresta.", r1);
+        missoes.add(m1);
+        Inimigo i1 = new Goblin("Jorge");
+
+        // SECOND MISSION
+        Item p2 = new ItemBuilder("Espada de Diamante", TipoItem.ARMAMENTO, Raridade.LENDARIO)
+                  .with_strength(20)
+                  .build();
+        Recompensa r2 = new Recompensa(p2, 12000000);
+
+
     }
 
     public boolean has_ended(){ return this.has_ended; }
@@ -96,6 +113,7 @@ public class GameMaster{
         System.out.println("INICIANDO O JOGO...\n\n");
         System.out.println(this.main_player);
         has_ended = true;
+
     }
 
 }

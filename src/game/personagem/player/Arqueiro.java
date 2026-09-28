@@ -15,7 +15,10 @@ public class Arqueiro extends Player{
     }
 
     @Override
-    public void attack(Personagem target){}
+    public void attack(Personagem target){
+        System.out.printf("%s attacks %s.\n", this.get_name(), target.get_name());
+        target.takeDamage(this.dexterity);
+    }
     @Override
     public String toString(){
         return String.format("%s (%d Energy left.).%nClasse: Arqueiro  | Destreza: %d%nGold: %d%nActive Mission:%n%s",

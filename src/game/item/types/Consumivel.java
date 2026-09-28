@@ -1,6 +1,7 @@
 package game.item.types;
 
 import game.item.*;
+import game.personagem.Personagem;
 
 public final class Consumivel extends Item{
 
@@ -16,6 +17,11 @@ public final class Consumivel extends Item{
 
     }
 
+    @Override
+    public void interact(Personagem p){
+        p.heal(heal);
+        this.change_qnty(-1);
+    }
     @Override
     public String toString(){
         return String.format("%s | Consumível | Raridade: %s | Quantidade: %d%nCura: %d",
