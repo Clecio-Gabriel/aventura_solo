@@ -21,7 +21,7 @@ public class Guerreiro extends Player{
     }
     @Override
     public String toString(){
-        return String.format("%s (%d Energy left.).%nClasse: Guerreiro  | Força: %d%nGold: %d%nActive Mission:%n%s",
+        return String.format("%s (%d Life left.).%nClasse: Guerreiro  | Força: %d%nGold: %d%nActive Mission:%n%s",
                              this.get_name(), this.get_life(),
                              this.strength, this.gold_qnty(),
                              (this.get_missao() == null) ? ("Sem missão ativa.") : this.get_missao()

@@ -21,7 +21,7 @@ public class Mago extends Player{
     }
     @Override
     public String toString(){
-        return String.format("%s (%d Energy left.).%nClasse: Mago  | Mana: %d%nGold: %d%nActive Mission:%n%s",
+        return String.format("%s (%d Life left.).%nClasse: Mago  | Mana: %d%nGold: %d%nActive Mission:%n%s",
                              this.get_name(), this.get_life(),
                              this.mana, this.gold_qnty(),
                              (this.get_missao() == null) ? ("Sem missão ativa.") : this.get_missao()
